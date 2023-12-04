@@ -11,66 +11,77 @@ import java.io.BufferedReader;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
 public class Main {
+
     public static void main(String[] args) throws IOException {
 
         new Frame();
-
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         Scanner sc = new Scanner(System.in);
 
-        //Description arr[장비명]배열에 장비명 입력
-        System.out.println("입력할 장비를 공백으로 구분하여 입력하세요:");
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        String[] arr = new String[st.countTokens()];
-        for(int i = 0; i<arr.length; i++){
-            arr[i] = st.nextToken();
+        // Description  <장비명[장비명/ENB명]> 배열에 장비명 입력
+        System.out.println("사용할 장비명을 엔터를 눌러 구분하여 입력하세요. 종료시엔"+"Stop!"+"을 입력해주세요");
+        //Description
+        ArrayList<String> arr = new ArrayList<>(); // 명령어 넣어준 배열
+        String temp_Equip = null;
+        int equip_Count = 0;
+
+        while (true) {
+
+            temp_Equip = sc.nextLine();
+
+            if(temp_Equip.equals("Stop!")) {
+                System.out.println("Stop! 입력됌");
+                break;
+            }
+
+            arr.add(temp_Equip);
+            equip_Count++;
         }
 
-        //Description arr2[명령어]배열에 명령어 입력
-        System.out.println("사용할 명령어를 공백으로 구분하여 입력하세요:");
-        StringTokenizer st2 = new StringTokenizer(br.readLine());
-        String[] arr2 = new String[st2.countTokens()];
-        for(int i = 0; i<arr2.length; i++){
-            arr2[i] = st2.nextToken();
+        // Description  <Command[명령어]> 배열에 명령어 입력
+        System.out.println("사용할 명령어를 엔터를 눌러 구분하여 입력하세요:");
+        //Description
+        ArrayList<String> arr2 = new ArrayList<>(); // 명령어 넣어준 배열
+        String a = null;
+        int command_Count = 0;
+
+        while (true) {
+
+            a = sc.nextLine();
+
+            if(a.equals("Stop!")) {
+                System.out.println("Stop! 입력됌");
+                break;
+            }
+
+            arr2.add(a);
+            command_Count++;
         }
 
-        int Count = arr.length * arr2.length;
+        //Description Count 계산
+        int Count = equip_Count * command_Count;
         System.out.println(Count);
-        // 행렬 데이터 입력받기
-        Object[][] matrix = new String[arr.length+1][5];
+
+
 
         System.out.println("고유식별번호 장비명/ENB명 명령어실행순서 명령어MATCH방식코드 명령어내용");
-        String[] zero_matrix = {"고유식별번호", "장비명/ENB명", "명령어실행순서", "명령어MATCH방식코드", "명령어내용"};
-        matrix[0] = zero_matrix;
+        String[] zero_matrix = { "고유식별번호", "장비명/ENB명", "명령어실행순서", "명령어MATCH방식코드", "명령어내용" };
 
-        int k=1;
 
-        for(int i=0; i<arr.length; i++){
-/*            arr[i] = st.nextToken();*/
-            for (int j=0; j<arr2.length; j++){
-                String[] rowValues = {String.valueOf(i), arr[i], String.valueOf(j),"H", String.valueOf(arr2[j])};
+        for(int i=0; i<equip_Count; i++) {
+            for (int j=0; j<command_Count; j++) {
+                String[] rowValues = {String.valueOf(i+1), String.valueOf(arr.get(i)),String.valueOf(j+1),"H",String.valueOf(arr2.get(j))};
                 System.out.println(Arrays.toString(rowValues));
-                matrix[k][0] = rowValues[j];
-                k++;
-            }
-
-        }
-
-        for (int i = 1; i < matrix.length; i++) {
-            Object[] inArr = matrix[i];
-            for (int j = 0; j < inArr.length; j++) {
-                System.out.print(inArr[j] + " ");
-            }
-            System.out.println();
-        }
+                }
+           }
 
 
-        // Excel 파일 생성
+    /*    // Excel 파일 생성
         Workbook workbook = new XSSFWorkbook();
         Sheet sheet = workbook.createSheet("MatrixSheet");
 
@@ -96,6 +107,9 @@ public class Main {
                 e.printStackTrace();
             }
 
-        }
+        }*/
+
+        System.out.println(Count+"행 생성됌");
+        System.exit(0);
     }
 }
