@@ -14,20 +14,20 @@ JAVA
 
 ## Auto_CMD 작성 기능
 <div class="AutoCMD_create">
-<img src="/images/AutoCMD_create.png">
+<img src="./images/AutoCMD_create.PNG"/>
 </div>
 
 ## Auto_CMD 작성 성공
 <div class="AutoCMD_success">
-<img src="/images/AutoCMD_success.png">
+<img src="./images/AutoCMD_success.PNG"/>
 </div>
 
 ## Auto_CMD 결과
 <div class="AutoCMD_result">
-<img src="/images/AutoCMD_result.png">
+<img src="./images/AutoCMD_result.PNG"/>
 </div>
 
 ## Auto_CMD 작성 실패
 <div class="AutoCMD_fail">
-<img src="/images/AutoCMD_fail.png">
+<img src="./images/AutoCMD_fail.PNG"/>
 </div>
