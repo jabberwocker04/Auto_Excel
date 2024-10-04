@@ -1,4 +1,4 @@
-# Board v2.7.2
+# Auto_CMD
 
 ## 개발환경
 IDE: IntelliJ IDEA Community  
