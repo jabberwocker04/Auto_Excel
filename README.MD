@@ -8,26 +8,26 @@ JDK 17
 JAVA  
 
 ## Auto_CMD 홈
-<div class="home_image">
+<div class="homee">
 <img src="./images/AutoCMD_Home.png">
 </div>
 
 ## Auto_CMD 작성 기능
-<div class="home_image">
+<div class="AutoCMD_create">
 <img src="./images/AutoCMD_create.png">
 </div>
 
 ## Auto_CMD 작성 성공
-<div class="home_image">
+<div class="AutoCMD_success">
 <img src="./images/AutoCMD_success.png">
 </div>
 
 ## Auto_CMD 결과
-<div class="home_image">
+<div class="AutoCMD_result">
 <img src="./images/AutoCMD_result.png">
 </div>
 
 ## Auto_CMD 작성 실패
-<div class="home_image">
+<div class="AutoCMD_fail">
 <img src="./images/AutoCMD_fail.png">
 </div>
