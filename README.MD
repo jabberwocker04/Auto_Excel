@@ -9,25 +9,25 @@ JAVA
 
 ## Auto_CMD 홈
 <div class="home_image">
-<img src="./Pictures/AutoCMD_Home.png">
+<img src="./images/AutoCMD_Home.png">
 </div>
 
 ## Auto_CMD 작성 기능
 <div class="home_image">
-<img src="./Pictures/AutoCMD_create.png">
+<img src="./images/AutoCMD_create.png">
 </div>
 
 ## Auto_CMD 작성 성공
 <div class="home_image">
-<img src="./Pictures/AutoCMD_success.png">
+<img src="./images/AutoCMD_success.png">
 </div>
 
 ## Auto_CMD 결과
 <div class="home_image">
-<img src="./Pictures/AutoCMD_result.png">
+<img src="./images/AutoCMD_result.png">
 </div>
 
 ## Auto_CMD 작성 실패
 <div class="home_image">
-<img src="./Pictures/AutoCMD_fail.png">
+<img src="./images/AutoCMD_fail.png">
 </div>
