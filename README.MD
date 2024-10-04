@@ -9,7 +9,7 @@ JAVA
 
 ## Auto_CMD 홈
 <div class="homee">
-<img src="/images/AutoCMD_Home.png">
+<img src="./images/AutoCMD_Home.PNG"/>
 </div>
 
 ## Auto_CMD 작성 기능
